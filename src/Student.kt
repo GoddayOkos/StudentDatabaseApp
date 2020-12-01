@@ -1,7 +1,7 @@
 import java.util.Scanner
-import kotlin.math.roundToInt
 
-class Student() {
+
+class Student {
     // Students Info
     private val firstName: String
     private val lastName: String
@@ -10,7 +10,6 @@ class Student() {
     private var courses: String = ""
     private var tuitionBalance: Int = 0
     private val costOfCourse: Int = 5000
-   // private var id: Int = (Math.random() * 5991).toInt()
 
     // Constructor: prompt the user to enter student name and year
     init {
@@ -40,7 +39,7 @@ class Student() {
             print("Enter courses to enroll (Q to quit): ")
             val scanner = Scanner(System.`in`)
             val course = scanner.nextLine().toUpperCase()
-            if (!course.equals("Q")) {
+            if (course != "Q") {
                 courses += "\n\t$course"
                 tuitionBalance += costOfCourse
             } else {
@@ -69,7 +68,7 @@ class Student() {
         println("\nStudent Information")
         println("___________________________")
         println("Name: $firstName $lastName\nCurrent level: $level\nStudent ID: $studentId" +
-                "\nCourses Enrolled: $courses\nTuition Balance: $tuitionBalance")
+                "\nCourses Enrolled: $courses\nTuition Balance: N$tuitionBalance")
         println("___________________________\n ")
     }
 }

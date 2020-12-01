@@ -7,11 +7,13 @@ fun main() {
     val numOfStudents = scanner.nextInt()
 
     // Create n number of students
-    var students: Array<Student>
-    for (n in 1..numOfStudents) {
-        students = arrayOf(Student())
-        students[0].enroll()
-        students[0].payTuition()
-        students[0].viewInfo()
+
+    val arrayOfStudents = arrayListOf<Student>()
+    for (n in 0 until numOfStudents) {
+        arrayOfStudents.add(n, Student())
+        arrayOfStudents[n].enroll()
+        arrayOfStudents[n].payTuition()
+        arrayOfStudents[n].viewInfo()
     }
+
 }
